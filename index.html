@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>whatsAdmin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jquery -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+
+    <!-- 页面样式 -->
+    <link rel="stylesheet" type="text/css" href="./css/whatsAdmin.css">
+    <script src="./js/whatsAdmin.js"></script>
+</head>
+
+<body>
+    <!-- 头 -->
+    <div id="header">
+        <!-- UA LOGO -->
+        <div class="header-logo text-center float-left">
+            <b>whatsAdmin</b>&nbsp;后台管理
+        </div>
+
+        <!-- 折叠按钮 -->
+        <div class="float-left collapse-btn">
+            <!--button class="btn btn-info" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fa fa-plus" aria-hidden="true"></i>
+				</button-->
+            <button class="btn" id="collapse-btn">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+
+        <!-- 退出登录 -->
+        <div class="float-right sign-out">
+            <i class="fas fa-sign-out-alt"></i>退出
+        </div>
+
+        <!-- 系统消息 -->
+        <div class="dropdown notice float-right bell">
+            <a id="notice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="far fa-bell"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="notice">
+            </ul>
+        </div>
+
+        <!-- 系统邮件 -->
+        <div class="dropdown notice float-right envelope">
+            <a id="notice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="far fa-envelope"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="notice"></ul>
+        </div>
+
+        <!-- 欢迎语 -->
+        <div class="float-right welcome">
+            下午好，UserName
+        </div>
+    </div>
+
+
+    <!-- 侧边栏 -->
+    <div id="navbar">
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <!-- 用户信息 -->
+                <li class="navbar-userinfo">
+                    <img id="user-headpic" src="./image/user04.png">
+                    <div>
+                        <i class="far fa-circle"></i>
+                        <span class="user-nicename">whatscode</span>
+                    </div>
+                </li>
+
+                <li class="nav-hr">Common 常用功能</li>
+
+                <li class="nav-item active">
+                    <a layout="homepage"><i class="fas fa-home"></i>首页</a>
+                </li>
+
+                <li class="nav-item">
+                    <a data-toggle="collapse" data-target="#navbarServer" aria-controls="navbarServer">
+                        <i class="fas fa-table"></i>服务器数据
+                        <span class="nav-expand float-right">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="collapse navbar-collapse" id="navbarServer">
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>访客图像</a>
+                        </li>
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>服务器压力</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a layout="b"><i class="far fa-edit"></i>修改资料</a>
+                </li>
+
+                <li class="nav-item">
+                    <a><i class="fas fa-tasks"></i>待处理任务</a>
+                </li>
+
+                <li class="nav-hr">Module 模块</li>
+
+                <li class="nav-item">
+                    <a data-toggle="collapse" data-target="#navbarBlog" aria-controls="navbarBlog">
+                        <i class="fas fa-blog"></i>博客
+                        <span class="nav-expand float-right">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="collapse navbar-collapse" id="navbarBlog">
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>博文管理</a>
+                        </li>
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>访问统计</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a data-toggle="collapse" data-target="#navbarWebApp" aria-controls="navbarWebApp">
+                        <i class="fab fa-html5"></i>WebApp
+                        <span class="nav-expand float-right">
+                            <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <ul class="collapse navbar-collapse" id="navbarWebApp">
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>应用管理</a>
+                        </li>
+                        <li>
+                            <a><i class="fas fa-angle-right"></i>访问统计</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-hr">User 用户管理</li>
+
+                <li class="nav-item">
+                    <a><i class="fas fa-id-card"></i>用户信息</a>
+                </li>
+
+                <li class="nav-item">
+                    <a><i class="fab fa-twitch"></i>留言审核</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <!-- 右侧动态加载页面布局 -->
+    <div id="content">
+        <iframe name="iframeMain" height="100%" width="100%" scrolling="yes" frameborder="0" src=""></iframe>
+    </div>
+
+</body>
+
+</html>
